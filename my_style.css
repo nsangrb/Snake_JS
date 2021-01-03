@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,600");
+
+body {
+  font-family: "Montserrat";
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  cursor: default;
+  display: grid;
+  grid-template-columns: 100vmin 10%;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+.left_region {
+  background-color: rgb(188, 255, 255);
+  display: grid;
+  width: 99vmin;
+  height: 99vmin;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  border: 0.5vmin solid rgb(29, 126, 126);
+}
+
+.game_noti {
+  position: absolute;
+  width: 100vmin;
+  height: 100vmin;
+  font-size: 10vmin;
+  color: red;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.snake {
+  background-color: hsl(200, 100%, 50%);
+  border: 0.25vmin solid black;
+}
+
+.snake-head {
+  background-color: hsl(200, 100%, 33%);
+  border: 0.25vmin solid black;
+}
+
+.food {
+  background-color: hsl(50, 100%, 50%);
+  border: 0.25vmin solid black;
+}
+
+.right_region {
+  position: relative;
+  background-color: rgb(248, 236, 222);
+  width: 130px;
+}
+
+.option {
+  position: relative;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 65px auto;
+}
+
+input[type="number"],
+select {
+  width: 80%;
+  padding: 7px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.score {
+  position: relative;
+  display: grid;
+  grid-template-columns: 60px auto;
+}
+
+.button {
+  padding-top: 10px;
+  display: block;
+}
+
+.my_button {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: rgb(255, 191, 118);
+  border: 0.05rem solid rgb(248, 236, 222);
+  color: rgb(62, 10, 250);
+  display: block;
+  font-size: 1.2rem;
+  font-style: bold;
+  text-align: center;
+  line-height: 2.4rem;
+  cursor: default;
+  outline: none;
+}
+
+.my_button:hover {
+  background: #bc89d1;
+}
+
+.my_button:disabled {
+  background: grey;
+}
+
+/*Toggle Button*/
+.togglebutton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-style: bold;
+  height: 100%;
+  cursor: default;
+  user-select: none;
+  background: rgb(255, 225, 191);
+  outline: none;
+}
+
+.togglebutton input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: none;
+}
+
+/* On mouse-over, add background color */
+.togglebutton:hover {
+  background-color: #bc89d1;
+}
+
+/* When the checkbox is checked, add background */
+.togglebutton input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.togglebutton input:checked ~ .checkmark:after {
+  display: block;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <link rel="stylesheet" href="./my_style.css">
+</head>
+
+<body>
+    <label class="game_noti" id="noti_lb">START</label>
+    <div class="left_region" id="game_region">
+
+    </div>
+    <div class="right_region" id="infos_region">
+        <div class="score">
+            <div><label>Score: </label></div>
+            <div><label id="score">0</label></div>
+        </div>
+        <div class="button">
+            <div>
+                <button class="my_button" id="start_btn">Start</button>
+            </div>
+            <div>
+                <button class="my_button" disabled=true id="stop_btn">Stop</button>
+            </div>
+            <div>
+                <button class="my_button" id="restart_btn">Restart</button>
+            </div>
+        </div>
+        <div class="option">
+            <label for="snake_speed" style="padding-top: 7px;">Speed:</label>
+            <input max=50 min=1 name="" type="number" id="snake_speed" value=10>
+
+        </div>
+
+        <div class="option">
+            <label for="game_size" style="padding-top: 7px;">Size:</label>
+            <input max=100 min=10 name="" type="number" id="game_size" value=20>
+
+        </div>
+        <div class="option" style="grid-template-columns: auto;">
+            <label class="togglebutton" id="boxmode_btn">Box Mode
+                <input type="checkbox" id="checkmark" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+        </diV>
+    </div>
+
+    <script src="my_script.js">
+    </script>
+</body>
+
+</html>
